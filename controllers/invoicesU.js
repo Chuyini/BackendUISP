@@ -6,7 +6,7 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
     const apiUrl = process.env.API; // API de UISP
     //recibimos lo que nos llego desde el cliente
 
-    const {clientId , date} = req.body;
+    const {clientId , date} = req.query;
 
     //si no hay nada o entradas desde el body invalidas
     if(!clientId || !date){
