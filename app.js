@@ -1,14 +1,10 @@
-const express = require("express");
-const app  = express();
+
+require("dotenv").config();
 
 
-app.get("/", 
-    
-    function(req, res){
 
-        console.log("ya se pudo\n");
-        console.log(res);
-    }
-    
-    
-);
+const Server = require("./models/server");
+
+const server= new Server();
+
+server.listen();
