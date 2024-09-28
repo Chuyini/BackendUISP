@@ -6,10 +6,10 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
     const apiUrl = process.env.API; // API de UISP
     //recibimos lo que nos llego desde el cliente
 
-    const {clientId , date} = req.query;
+    const { date } = req.query;
 
     //si no hay nada o entradas desde el body invalidas
-    if(!clientId || !date){
+    if(!date){
 
         res.status(500).json(
            {
@@ -22,10 +22,10 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
 
     //const clientId = req.query.clientId || 198; // Ejemplo de un parámetro
     const createdDateFrom = req.query.createdDateFrom || "2024-08-02";
-    const createdDateTo = req.query.createdDateTo || "2024-09-24";
+    //const createdDateTo = req.query.createdDateTo || "2024-09-24";
 
 
-    const response = await axios.get(`${apiUrl}?clientId=${clientId}&createdDateFrom=${createdDateFrom}&createdDateTo=${createdDateTo}`, {
+    const response = await axios.get(`${apiUrl}?createdDateFrom=${createdDateFrom}`, {
       headers: {
         'X-Auth-App-Key': process.env.KEY // Llave de autenticación
       }
@@ -41,6 +41,8 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
   }
 };
 
+
+
 module.exports = {
-  getInvoicesFromUISP,
+  getInvoicesFromUISP
 };

@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = Router();
-const { getInvoicesFromUISP } = require("../controllers/invoicesU");
+const { getAllClientFromUISP} = require("../controllers/clientsU");
 
 //aqui se pondran los controladores que son las funciones 
 
@@ -8,7 +8,7 @@ const { getInvoicesFromUISP } = require("../controllers/invoicesU");
 
 
 
-router.get("/",getInvoicesFromUISP);
+router.get("/",getAllClientFromUISP);
 
 
 module.exports = router;

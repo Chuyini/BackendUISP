@@ -6,6 +6,7 @@ class Server {
     this.app = express();
     this.port = process.env.PORT || 3000; // Si no hay puerto en .env, usa 3000
     this.getInvoices = "/api/invoices"; // Corrige el endpoint
+    this.getClients= "/api/clients";
 
     this.middlewares(); // Llama los middlewares
     this.routes(); // Configura las rutas
@@ -18,6 +19,7 @@ class Server {
 
   routes() {
     this.app.use(this.getInvoices, require("../routes/inovices")); // Llama a las rutas
+    this.app.use(this.getClients, require("../routes/clients")); // Llama a las rutas
   }
 
   listen() {
