@@ -14,9 +14,13 @@ class Server {
     }
 
     middlewares() {
+        const corsOptions = {
+            origin: 'https://facturas-crm.vercel.app',
+            optionsSuccessStatus: 200
+          };
         this.app.use(express.json()); // Habilita JSON
-        this.app.use(cors()); // Habilita CORS
-       
+        this.app.use(cors(corsOptions)); // Habilita CORS
+        
     }
 
     routes() {
