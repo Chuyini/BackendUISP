@@ -6,23 +6,12 @@ const getServicesByClientUISP = async (req = request, res = response) => {
     const apiUrl = process.env.APIS; // API de UISP
     //recibimos lo que nos llego desde el csliente
 
-    const { clientId } = req.query;
+   
 
-    //si no hay nada o entradas desde el body invalidas
-    if(!clientId){
-
-        res.status(500).json(
-           {
-            msg: "faltan parametros"
-           } 
-        );
-        return;
-        
-    }
+  
 
 
-
-    const response = await axios.get(`${apiUrl}?clientId=${clientId}`, {
+    const response = await axios.get(`${apiUrl}`, {
       headers: {
         'X-Auth-App-Key': process.env.KEY // Llave de autenticación
       }
