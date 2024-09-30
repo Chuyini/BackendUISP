@@ -16,6 +16,7 @@ class Server {
     middlewares() {
         this.app.use(express.json()); // Habilita JSON
         this.app.use(cors()); // Habilita CORS
+        this.app.use(cors({ origin: "http://localhost:4200" }));
     }
 
     routes() {
