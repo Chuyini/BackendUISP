@@ -4,7 +4,7 @@ const axios = require("axios");
 const getServicesByClientUISP = async (req = request, res = response) => {
   try {
     const apiUrl = process.env.APIS; // API de UISP
-    //recibimos lo que nos llego desde el cliente
+    //recibimos lo que nos llego desde el csliente
 
     const { clientId } = req.query;
 
