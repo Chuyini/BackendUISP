@@ -21,7 +21,7 @@ class Server {
     routes() {
         this.app.use(this.getInvoices, require("../routes/inovices")); // Llama a las rutas
         this.app.use(this.getClients, require("../routes/clients")); // Llama a las rutas
-        this.app.use(this.getClients, require("../routes/services")); // Llama a las rutas
+        this.app.use(this.getServices, require("../routes/services")); // Llama a las rutas
     }
 
     listen() {
