@@ -21,7 +21,7 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
     }
 
     //const clientId = req.query.clientId || 198; // Ejemplo de un parámetro
-    const createdDateFrom = req.query.createdDateFrom || "2024-08-02";
+    const createdDateFrom = req.query.createdDateFrom
     //const createdDateTo = req.query.createdDateTo || "2024-09-24";
 
 
