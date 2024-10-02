@@ -37,7 +37,8 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
     console.error("Error al obtener las facturas:");
     res.status(500).json({
       msg: "Hubo un error al obtener las facturas",
-      mes:req.query
+      mes:req.query,
+      mes2:response
     });
     return;
   }
