@@ -8,6 +8,7 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
 
     const { date } = req.query;
 
+
     //si no hay nada o entradas desde el body invalidas
     if(!date){
 
@@ -36,6 +37,7 @@ const getInvoicesFromUISP = async (req = request, res = response) => {
     console.error("Error al obtener las facturas:");
     res.status(500).json({
       msg: "Hubo un error al obtener las facturas",
+      mes:req.query
     });
     return;
   }
