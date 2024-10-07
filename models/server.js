@@ -15,7 +15,7 @@ class Server {
 
     middlewares() {
         const corsOptions = {
-            origin: ['https://facturas-crm.vercel.app','https://localhost:4200','http://localhost:4200','https://podernet-facturas.vercel.app'],
+            origin: ['https://facturas-crm.vercel.app','https://localhost:4200','http://localhost:4200','https://podernet-facturas.vercel.app','https://podernet-facturas.vercel.app/'],
             optionsSuccessStatus: 200
           };
         this.app.use(express.json()); // Habilita JSON
