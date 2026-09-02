@@ -22,6 +22,7 @@ const getServicesByClientUISP = async (req = request, res = response) => {
     console.error("Error al obtener las facturas:");
     res.status(500).json({
       msg: "Hubo un error al obtener las facturas",
+      error: error.message
     });
     return;
   }
