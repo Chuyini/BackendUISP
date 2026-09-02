@@ -12,7 +12,7 @@ class Server {
         this.middlewares(); // Llama los middlewares
         this.routes(); // Configura las rutas
     }
-
+//https://podernet-facturas.vercel.app/
     middlewares() {
         const corsOptions = {
             origin: ['https://facturas-crm.vercel.app','https://localhost:4200','http://localhost:4200','https://podernet-facturas.vercel.app','https://podernet-facturas.vercel.app/'],

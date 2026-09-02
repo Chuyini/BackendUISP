@@ -35,9 +35,10 @@ const getAllClientFromUISP = async (req = request, res = response) => {
 
         res.json(response.data); // Envía los datos como respuesta
     } catch (error) {
-        console.error("Error al obtener las facturas:");
+        console.error("Error al obtener las facturas: ",error);
         res.status(500).json({
             msg: "Hubo un error al obtener las facturas",
+            error: error.message
         });
         return;
     }
